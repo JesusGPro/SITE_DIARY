@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Introduce the Id of the report to read {% endblock %}</h1>
+    <form method="post">
+        <label for="title">Title</label>
+        <br>
+        <input type="text" name="id" placeholder="Message Id"
+               value="{{ request.form['id'] }}">
+
+        <button type="submit">Submit</button>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+    </form>
+{% endblock %}
