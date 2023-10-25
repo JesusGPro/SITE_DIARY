@@ -1,0 +1,19 @@
+name: site_diary
+run-name: ${{ github.actor }} is trying to develop site diary inside github
+on:
+  # allows to trigger manually
+  workflow_dispatch:
+
+# a workflow run is made up of one or more jobs running sequentially or in parallel
+jobs:
+  # This workflow contains only one job called 'deployment'
+  deployment:
+    runs-on: windows
+    environment: production
+    concurrency: production
+    # steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB-WORKSPACE so your job can access it
+      - uses: actions/checkout@v3
+      - name: SITE_DIARY .github/workflows/app.py
+        
