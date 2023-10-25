@@ -15,5 +15,5 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB-WORKSPACE so your job can access it
       - uses: actions/checkout@v3
-      - name: SITE_DIARY .github/workflows/app.py
+      - name: SITE_DIARY/app.py
         
