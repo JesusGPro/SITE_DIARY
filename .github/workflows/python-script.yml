@@ -14,5 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: ejecutar un programa tonto de una linea
+      env:
+        TOKEN_SECRETO: ${{ secrets.TOKEN_SECRETO}}
       run: python .github/workflows/ejemplo.py
     
